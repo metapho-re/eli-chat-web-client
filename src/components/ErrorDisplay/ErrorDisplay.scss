@@ -1,0 +1,34 @@
+@import '../../App.scss';
+
+#errorScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    #errorBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $eliGrey;
+        background-color: whitesmoke;
+        padding: 50px;
+        border: 5px solid $eliYellow;
+        border-radius: 20px;
+        div {
+            div{
+                p::first-letter {
+                    text-transform: capitalize;
+                }
+                p:nth-child(even) {
+                    color: red;
+                }
+            }
+        }
+    }
+}

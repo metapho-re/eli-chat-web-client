@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+/*******************************/
+/* Global variables definition */
+/*******************************/
+
+$headerHeight: 75px;
+$userListHeight: calc(100vh - #{$headerHeight});
+$chatListHeight: #{$userListHeight};
+$messageInputHeight: 75px;
+$messageWallHeight: calc(100vh - (#{$headerHeight} + #{$messageInputHeight}));
+
+$messageWallWidth: 70vw;
+$messageWallMaxWidth: calc(100vw - 560px);
+$userListWidth: calc((100vw - #{$messageWallWidth}) / 2);
+$userListMinWidth: 280px;
+$chatListWidth: calc((100vw - #{$messageWallWidth}) / 2);
+$chatListMinWidth: 280px;
+
+
+$eliYellow: #ffdc00;
+$eliGrey: #405057;
+
+#smallScreen {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    #smallScreen {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $eliYellow;
+        background-color: $eliGrey;
+        text-align: center;
+    }
+}

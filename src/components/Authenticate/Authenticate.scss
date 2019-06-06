@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+#authPage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $eliYellow;
+    #authBlock {
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px;
+        padding-bottom: 10px;
+        background-color: $eliGrey;
+        max-width: 352px;
+        h1 {
+            padding-bottom: 20px;
+            color: $eliYellow;
+        }
+        form {
+            width: 250px;
+            button {
+                width: calc(50% - 5px);
+                margin-left: 5px;
+                .spinner-border {
+                    position: relative;
+                    bottom: 3px;
+                }
+            }
+            button:nth-child(odd) {
+                margin-right: 5px;
+                margin-left: 0;
+            }
+        }
+        .errorMessage {
+            min-height: 38px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #authPage {
+        display: none;
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../App.scss';
+
+#loaderScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    #loaderBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $eliGrey;
+        background-color: whitesmoke;
+        font-size: 1.5em;
+        padding: 50px;
+        border: 5px solid $eliYellow;
+        border-radius: 20px;
+        #spinners {
+            .spinner-grow {
+                color: $eliYellow;
+                margin: 0 20px;
+            }
+        }
+    }
+}

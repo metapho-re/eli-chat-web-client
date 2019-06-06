@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+#messageInput {
+    font-family: 'Quicksand', sans-serif;
+    height: $messageInputHeight;
+    padding: 10px 25px;
+    background-color: $eliGrey;
+    display: flex;
+    align-items: center;
+    input {
+        width: calc(100% - 58px);
+        margin-bottom: 0;
+    }
+    input:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+}

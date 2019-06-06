@@ -1,0 +1,56 @@
+@import '../../App.scss';
+
+#messageWall {
+    overflow-y: scroll;
+    height: $messageWallHeight;
+    width: $messageWallWidth;
+    max-width: $messageWallMaxWidth;
+    background-color: whitesmoke;
+    padding-top: 30px;
+    ul {
+        list-style: none;
+        padding-right: 40px;
+        li {
+            list-style-type: none;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+            .messageWrapper {
+                padding: 10px 25px;
+                border: 1px solid lightgrey;
+                border-radius: 10px;
+                background-color: gainsboro;
+                max-width: 80%;
+                p {
+                    margin-bottom: 8px;
+                }
+                .username {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+                .time {
+                    font-size: 0.8em;
+                    color: grey;
+                    margin-left: 20px;
+                }
+                .message {
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 1.1em;
+                    text-align: justify;
+                }
+            }
+        }
+        li.outgoing {
+            justify-content: flex-start;
+        }
+        li.incoming {
+            justify-content: flex-end;
+            .messageWrapper {
+                background-color: $eliYellow;
+                p:first-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

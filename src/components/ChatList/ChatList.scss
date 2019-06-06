@@ -1,0 +1,44 @@
+@import '../../App.scss';
+
+#chatList {
+    overflow-y: scroll;
+    height: $chatListHeight;
+    width: $chatListWidth;
+    min-width: $chatListMinWidth;
+    border-top: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    background-color: $eliGrey;
+    div {
+        text-align: center;
+        border-bottom: 1px solid lighten($eliGrey, 6%);
+        p {
+            display: inline-block;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding: 6px 12px;
+            color: $eliYellow;
+        }
+    }
+    ul {
+        padding-left: 0;
+        list-style: none;
+        li {
+            button {
+                width: 100%;
+                padding: 10px 25px;
+                text-align: left;
+                color: whitesmoke;
+                background-color: $eliGrey;
+                transition: color 0.5s, background-color 0.5s;
+                border-bottom: 1px solid lighten($eliGrey, 6%);
+            }
+        }
+        li.selected {
+            button {
+                color: $eliYellow;
+                background-color: lighten($eliGrey, 3%);
+                transition: color 0.5s, background-color 0.5s;
+            }
+        }
+    }
+}

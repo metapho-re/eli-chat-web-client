@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+#header {
+    width: 100%;
+    height: $headerHeight;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $eliGrey;
+    color: $eliYellow;
+    padding-left: 25px;
+    padding-right: 25px;
+    p:first-child {
+        margin-bottom: 0;
+        font-size: 1.2em;
+    }
+}

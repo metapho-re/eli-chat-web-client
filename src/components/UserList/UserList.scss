@@ -1,0 +1,52 @@
+@import '../../App.scss';
+
+#userList {
+    overflow-y: scroll;
+    height: $userListHeight;
+    width: $userListWidth;
+    min-width: $userListMinWidth;
+    border-top: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    background-color: $eliGrey;
+    div {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid lighten($eliGrey, 6%);
+        button {
+            margin: 16px auto;
+        }
+    }
+    ul {
+        padding-left: 0;
+        list-style: none;
+        li {
+            button {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 10px 25px;
+                color: whitesmoke;
+                background-color: $eliGrey;
+                border-radius: 0;
+                border-bottom: 1px solid lighten($eliGrey, 6%);
+                transition: background-color 0.5s;
+            }
+            button::before {
+                content: "\2022";
+                color: grey;
+                font-size: 2em;
+                display: inline-block;
+                width: 1em;
+            }
+            button.online::before {
+                color: $eliYellow;
+            }
+        }
+        li.selected {
+            button {
+                background-color: lighten($eliGrey, 3%);
+                transition: background-color 0.5s;
+            }
+        }
+    }
+}
