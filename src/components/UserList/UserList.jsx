@@ -15,7 +15,7 @@ const UserList = ({
     createChat,
 }) => (
     <div id="userList">
-        <div>
+        <div id="userListHeader">
             <Button
                 type="button"
                 disabled={!hasSelectedUser(users) || isLoading}
@@ -28,26 +28,28 @@ const UserList = ({
                 Create a Chat
             </Button>
         </div>
-        <ul>
-            {(users || []).map(user => (
-                <li
-                    key={uid(user)}
-                    className={user[2] ? 'selected' : ''}
-                >
-                    <Button
-                        type="button"
-                        className={(user[1].length !== 0) ? 'online' : 'offline'}
-                        username={user[0]}
-                        socketid={user[1]}
-                        onClick={e => toggleUserForChat(e.target.getAttribute('username'))}
+        <div id="userListBody">
+            <ul>
+                {(users || []).map(user => (
+                    <li
+                        key={uid(user)}
+                        className={user[2] ? 'selected' : ''}
                     >
-                        {user[0]}
-                        {' '}
-                        {(user[1].length !== 0) ? '(online)' : ''}
-                    </Button>
-                </li>
-            ))}
-        </ul>
+                        <Button
+                            type="button"
+                            className={(user[1].length !== 0) ? 'online' : 'offline'}
+                            username={user[0]}
+                            socketid={user[1]}
+                            onClick={e => toggleUserForChat(e.target.getAttribute('username'))}
+                        >
+                            {user[0]}
+                            {' '}
+                            {(user[1].length !== 0) ? '(online)' : ''}
+                        </Button>
+                    </li>
+                ))}
+            </ul>
+        </div>
     </div>
 );
 UserList.propTypes = {

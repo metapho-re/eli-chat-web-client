@@ -9,27 +9,29 @@ const ChatList = ({
     selectChat,
 }) => (
     <div id="chatList">
-        <div>
+        <div id="chatListHeader">
             <p>Select a Chat</p>
         </div>
-        <ul>
-            {(chats || []).map(chat => (
-                <li
-                    key={chat[0]}
-                    className={chat[1] ? 'selected' : ''}
-                >
-                    <Button
-                        type="button"
-                        chatid={chat[0]}
-                        onClick={e => selectChat(e.target.getAttribute('chatid'))}
+        <div id="chatListBody">
+            <ul>
+                {(chats || []).map(chat => (
+                    <li
+                        key={chat[0]}
+                        className={chat[1] ? 'selected' : ''}
                     >
-                        {getPropertiesFromChatId(chat[0]).usernames}
-                        <br />
-                        {getPropertiesFromChatId(chat[0]).date}
-                    </Button>
-                </li>
-            ))}
-        </ul>
+                        <Button
+                            type="button"
+                            chatid={chat[0]}
+                            onClick={e => selectChat(e.target.getAttribute('chatid'))}
+                        >
+                            {getPropertiesFromChatId(chat[0]).usernames}
+                            <br />
+                            {getPropertiesFromChatId(chat[0]).date}
+                        </Button>
+                    </li>
+                ))}
+            </ul>
+        </div>
     </div>
 );
 ChatList.propTypes = {
