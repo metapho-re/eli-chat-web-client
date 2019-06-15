@@ -21,7 +21,7 @@ const ErrorDisplay = ({
         return (
             <div id="errorScreen">
                 <div id="errorBox" className="d-flex flex-column">
-                    <div className="d-flex flex-row">
+                    <div>
                         <div className="text-center">
                             <p>{usersErrorMessage.length !== 0 ? 'An error occured while fetching users:' : ''}</p>
                             <p>{usersErrorMessage}</p>
